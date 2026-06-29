@@ -818,41 +818,6 @@ body::after{
 }
 
 /* ===================================================
-   FADE ANIMATIONS
-===================================================*/
-
-.hero,
-.about-card,
-.skill-card,
-.project-card,
-.timeline-item,
-form{
-
-    animation:fadeUp .8s ease;
-
-}
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(40px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-/* ===================================================
    RESPONSIVE
 ===================================================*/
 
@@ -1161,4 +1126,19 @@ button, a, .project-card, .skill-card {
 
 .nav-links a:hover::after {
     width: 100%;
+}
+.hero,
+.about-card,
+.skill-card,
+.project-card,
+.timeline-item,
+form {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
