@@ -1142,3 +1142,8 @@ form {
     opacity: 1;
     transform: translateY(0);
 }
+.loader-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
