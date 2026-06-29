@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
 
     const loader = document.getElementById("loader");
 
-    if (!loader) return; // prevents crashes if loader doesn't exist
+    if (!loader) return; 
 
     setTimeout(() => {
         loader.style.opacity = "0";
