@@ -1,0 +1,28 @@
+{
+  "name": "francis-mbugua-portfolio",
+  "version": "2.0.0",
+  "description": "Professional portfolio of Francis Mbugua - Full Stack Developer and Founder of Nexora Technologies",
+  "author": "Francis Mbugua",
+  "license": "MIT",
+  "homepage": "https://github.com/Francis297-web/personalportfolio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Francis297-web/personalportfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "full-stack",
+    "web-development",
+    "kenya",
+    "software-engineer",
+    "nexora-technologies"
+  ],
+  "scripts": {
+    "serve": "npx http-server -p 8000",
+    "start": "npx http-server",
+    "build": "echo 'Static site - no build step needed'"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
