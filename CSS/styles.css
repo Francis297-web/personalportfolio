@@ -334,10 +334,13 @@ HERO
 
 
 .hero-image img{
-    width:50%;
-    height:50%;
-    object-fit:cover;
-    object-position:center top;
+    width: 50%;
+   
+    height: 50%;
+   
+    object-fit: cover;
+   
+    object-position: center top;
 }
 .hero-buttons{
 
