@@ -146,6 +146,15 @@ header {
     box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
 }
 
+.logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .logo h2{
 
