@@ -87,9 +87,9 @@ p{
 
 img{
 
-    width:100%;
-    display:cicle;
-   object-fit:cover
+    width: 100%;
+    display: cicle;
+   object-fit: cover;
 
 }
 
@@ -135,6 +135,12 @@ header {
     height:80px;
 
 }
+.logo img {
+   width: 60px;
+   height: 60px;
+   object-fit: contain;
+}
+
 
 .logo h2{
 
@@ -338,7 +344,7 @@ HERO
    
     height: 50%;
    
-    object-fit: cover;
+    object-fit: contain;
    
     object-position: center top;
 }
