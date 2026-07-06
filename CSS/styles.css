@@ -450,45 +450,68 @@ form button:hover {
     background:linear-gradient(135deg,var(--blue),var(--purple));
 
 }
-
 /* ==========================
 PROFILE IMAGE
 ==========================*/
+
 .hero-image{
     flex:1;
     display:flex;
     justify-content:center;
     align-items:center;
+    position:relative;
+    overflow:visible;
 }
 
 .hero-image img{
-    width:350px;
-    height:350px;
-    border-radius:50%;
+    width:340px;
+    height:340px;
+
     object-fit:cover;
 
-    /* Default view - focus on the face */
-    object-position:center 15%;
+    /* Shows mostly your face */
+    object-position:center 12%;
 
+    border-radius:50%;
     border:6px solid var(--blue);
-    box-shadow:0 0 30px rgba(59,130,246,.4);
+
+    box-shadow:
+        0 0 25px rgba(59,130,246,.35),
+        0 0 60px rgba(139,92,246,.18);
 
     cursor:pointer;
-    transition:all .7s ease;
+
+    transition:
+        width .7s ease,
+        height .7s ease,
+        border-radius .7s ease,
+        transform .7s ease,
+        object-position .7s ease,
+        box-shadow .7s ease;
+
+    z-index:5;
 }
 
-/* Hover effect */
+/* Hover = reveal the full image */
+
 .hero-image img:hover{
-    width:380px;
-    height:500px;
+
+    width:360px;
+    height:560px;
 
     border-radius:30px;
 
-    /* Show the whole image */
+    object-fit:cover;
+
+    /* Move image upward so more of the body is revealed */
     object-position:center top;
 
-    transform:scale(1.05);
-    box-shadow:0 0 45px rgba(139,92,246,.6);
+    transform:translateY(-15px) scale(1.05);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.45),
+        0 0 40px rgba(59,130,246,.35),
+        0 0 80px rgba(139,92,246,.35);
 }
 
 
