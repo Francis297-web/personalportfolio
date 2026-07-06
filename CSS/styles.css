@@ -353,15 +353,20 @@ HERO
 
 
 .hero-image img{
-    width: 50%;
-   
-    height: 70%;
-   
-    transform: scale(1.04);
-   
-    object-fit: contain;
-   
-    object-position: center top;
+  content: "";
+    position: absolute;
+    top: 30;
+    left: 2;
+    right: 2;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background: #191919;
+    border:8px solid var (--clr);
+    transition: 0.5s,background 0.5s;
+    transition-delay: 0.75s,1s;
+    filter: drop-shadow(0 0 10px var(--clr));
+    filter: drop-shadow(0 0 60 px(--clr)); 
 }
 .hero-buttons{
 
@@ -460,31 +465,6 @@ PROFILE IMAGE
     display:flex;
 
     justify-content:center;
-
-}
-
-.hero-image img{
-
-    width:420px;
-
-    border-radius:30px;
-
-    border:3px solid rgba(255,255,255,.08);
-
-    box-shadow:
-    0 0 30px rgba(59,130,246,.3),
-    0 0 80px rgba(139,92,246,.25);
-
-    transition:.5s;
-
-}
-
-.hero-image img:hover{
-   width:100%;
-   height:100%;
-   object-fit:cover;
-
-    transform:scale(1.04);
 
 }
 
