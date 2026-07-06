@@ -454,16 +454,43 @@ form button:hover {
 /* ==========================
 PROFILE IMAGE
 ==========================*/
-
 .hero-image{
-
     flex:1;
-
     display:flex;
-
     justify-content:center;
-
+    align-items:center;
 }
+
+.hero-image img{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    object-fit:cover;
+
+    /* Default view - focus on the face */
+    object-position:center 15%;
+
+    border:6px solid var(--blue);
+    box-shadow:0 0 30px rgba(59,130,246,.4);
+
+    cursor:pointer;
+    transition:all .7s ease;
+}
+
+/* Hover effect */
+.hero-image img:hover{
+    width:380px;
+    height:500px;
+
+    border-radius:30px;
+
+    /* Show the whole image */
+    object-position:center top;
+
+    transform:scale(1.05);
+    box-shadow:0 0 45px rgba(139,92,246,.6);
+}
+
 
 /* ==========================
 ABOUT
