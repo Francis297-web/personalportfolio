@@ -1,530 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="author" content="Francis Mbugua Chege">
-  <link rel="shortcut icon" href="image/logo.png">
-
-  <meta name="description" content="Official portfolio of Francis Mbugua Chege - Full Stack Developer, Founder of Nexora Technologies." />
-  <meta name="keywords" content="portfolio, full-stack developer, Kenya, software engineer, Nexora Technologies" />
-
-  <!-- Open Graph / social share preview -->
-  <meta property="og:title" content="Francis Mbugua Chege | Full Stack Developer">
-  <meta property="og:description" content="Founder of Nexora Technologies. Full Stack Developer building websites, Android apps, and cybersecurity solutions.">
-  <meta property="og:image" content="image/profile.png">
-  <meta property="og:type" content="website">
-
-  <!-- Bootstrap CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link href="css/tiny-slider.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <title>FRANCIS MBUGUA CHEGE / PORTFOLIO</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Francis Mbugua Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
-
 <body>
 
-  <!-- Start Header/Navigation -->
-  <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Francis Mbugua navigation bar">
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <img src="https://github.com/Francis297-web/personalportfolio/blob/main/image/logo.png" alt="Logo">
+      </div>
+      <div class="loading-bar"><span></span></div>
+    </div>
+  </div>
 
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Francis Chege<span>.</span></a>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="https://github.com/Francis297-web/personalportfolio/blob/main/image/logo.png" alt="Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="resume.pdf" class="resume-btn">Download Resume</a>
+    </nav>
+  </header>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Hello, I'm <span>Francis Mbugua</span></h1>
+        <p class="hero-description">A passionate developer building responsive and interactive web experiences.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="#contact" class="btn-secondary">Get in Touch</a>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-container">
+          <img src="https://github.com/Francis297-web/personalportfolio/blob/main/image/profile.png" alt="Profile">
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="collapse navbar-collapse" id="navbarsFurni">
-        <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#skills">Skills</a></li>
-          <li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link" href="#blog">Blog</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
+  <!-- About -->
+  <section id="about">
+    <div class="about-card">
+      <h2>About Me</h2>
+      <p>I specialize in creating responsive, modern websites with interactive animations and clean design.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="fab fa-html5"></i><h3>HTML</h3></div>
+      <div class="skill-card"><i class="fab fa-css3-alt"></i><h3>CSS</h3></div>
+      <div class="skill-card"><i class="fab fa-js"></i><h3>JavaScript</h3></div>
+      <div class="skill-card"><i class="fab fa-react"></i><h3>React</h3></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card reveal">
+        <img src="https://github.com/Francis297-web/personalportfolio/blob/main/image/nexora.webp" alt="Nexora">
+        <h3>Nexora Technologies</h3>
+        <p>A responsive tech web platform.</p>
+        <div class="project-buttons">
+          <a href="https://nexora-live-demo-link.com" target="_blank" class="btn-primary">Live Demo</a>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img src="https://github.com/Francis297-web/personalportfolio/blob/main/image/signix.webp" alt="Signix">
+        <h3>Signix</h3>
+        <p>A sign language web application.</p>
+        <div class="project-buttons">
+          <a href="https://signix-live-demo-link.com" target="_blank" class="btn-primary">Live Demo</a>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img src="https://github.com/Francis297-web/personalportfolio/blob/main/image/Fratience.png" alt="Fratience">
+        <h3>Fratience</h3>
+        <p>Another tech web project showcasing innovation.</p>
+        <div class="project-buttons">
+          <a href="https://fratience-live-demo-link.com" target="_blank" class="btn-primary">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Francis Mbugua</h3>
+        <p>Building modern, responsive web experiences.</p>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-
-        <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-          <li><a class="nav-link" href="assets/Francis_Mbugua_CV.pdf" download title="Download CV"><i class="fas fa-download"></i></a></li>
-          <li><a class="nav-link" href="https://wa.me/254790357975?text=Hello%20Francis%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
-        </ul>
       </div>
     </div>
-
-  </nav>
-  <!-- End Header/Navigation -->
-
-  <!-- Start Hero Section -->
-  <div class="hero" id="home">
-    <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-lg-5">
-          <div class="intro-excerpt">
-            <h1>Full Stack <span class="d-block">Developer</span></h1>
-            <p class="mb-4">Founder of Nexora Technologies. I build modern websites, Android applications, cybersecurity solutions, and software that solves real-world problems.</p>
-            <p><a href="#projects" class="btn btn-secondary me-2">View Projects</a><a href="#contact" class="btn btn-white-outline">Hire Me</a></p>
-          </div>
-        </div>
-        <div class="col-lg-7">
-          <div class="hero-img-wrap">
-            <img src="image/profile.png" class="img-fluid" alt="Francis Mbugua Chege">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Hero Section -->
-
-  <!-- Start Intro / Featured Work Section -->
-  <div class="product-section" id="about">
-    <div class="container">
-      <div class="row">
-
-        <!-- Start Column 1 -->
-        <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-          <h2 class="mb-4 section-title">Building software that solves real problems.</h2>
-          <p class="mb-4">I'm a software developer from Kenya, and the founder of Nexora Technologies. I work across the full stack — from interface to infrastructure — on web, mobile, and cybersecurity projects.</p>
-          <p><a href="#projects" class="btn">See All Projects</a></p>
-        </div>
-        <!-- End Column 1 -->
-
-        <!-- Start Column 2 -->
-        <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-          <a class="product-item" href="https://francis297-web.github.io/nexora/" target="_blank">
-            <img src="image/nexora-hub.png" class="img-fluid product-thumbnail" alt="Nexora Technologies">
-            <h3 class="product-title">Nexora Technologies</h3>
-            <strong class="product-price">Live Project</strong>
-
-            <span class="icon-cross">
-              <img src="images/cross.svg" class="img-fluid" alt="">
-            </span>
-          </a>
-        </div>
-        <!-- End Column 2 -->
-
-        <!-- Start Column 3 -->
-        <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-          <a class="product-item" href="https://project-3fsps-7jc9zubdm-fratience.vercel.app" target="_blank">
-            <img src="image/Fratience.png" class="img-fluid product-thumbnail" alt="Fratience Tech Solutions">
-            <h3 class="product-title">Fratience Tech Solutions</h3>
-            <strong class="product-price">Live Project</strong>
-
-            <span class="icon-cross">
-              <img src="images/cross.svg" class="img-fluid" alt="">
-            </span>
-          </a>
-        </div>
-        <!-- End Column 3 -->
-
-      </div>
-    </div>
-  </div>
-  <!-- End Intro / Featured Work Section -->
-
-  <!-- Start Why Work With Me Section -->
-  <div class="why-choose-section">
-    <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-lg-6">
-          <h2 class="section-title">Why Work With Me</h2>
-          <p>I care about writing clean, maintainable code and delivering software that actually works for the people using it — not just what looks good in a demo.</p>
-
-          <div class="row my-5">
-            <div class="col-6 col-md-6">
-              <div class="feature">
-                <div class="icon">
-                  <i class="fas fa-code fa-2x"></i>
-                </div>
-                <h3>Clean Code</h3>
-                <p>Readable, well-structured code that's easy to maintain and extend.</p>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-6">
-              <div class="feature">
-                <div class="icon">
-                  <i class="fas fa-bolt fa-2x"></i>
-                </div>
-                <h3>Fast Delivery</h3>
-                <p>Clear timelines and steady progress updates, not last-minute surprises.</p>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-6">
-              <div class="feature">
-                <div class="icon">
-                  <i class="fas fa-headset fa-2x"></i>
-                </div>
-                <h3>Responsive Support</h3>
-                <p>Reachable on WhatsApp and email for questions during and after the build.</p>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-6">
-              <div class="feature">
-                <div class="icon">
-                  <i class="fas fa-shield-alt fa-2x"></i>
-                </div>
-                <h3>Security-Minded</h3>
-                <p>Built-in attention to data protection and secure coding practices.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="col-lg-5">
-          <div class="img-wrap">
-            <img src="image/why-choose-us-img.jpg" alt="Francis working" class="img-fluid">
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- End Why Work With Me Section -->
-
-  <!-- Start Skills Section -->
-  <div class="we-help-section" id="skills">
-    <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-lg-7 mb-5 mb-lg-0">
-          <div class="imgs-grid">
-            <div class="grid grid-1"><img src="image/nexora-hub.png" alt="Nexora Technologies"></div>
-            <div class="grid grid-2"><img src="image/Fratience.png" alt="Fratience Tech Solutions"></div>
-            <div class="grid grid-3"><img src="image/Signix.webp" alt="Signix"></div>
-          </div>
-        </div>
-        <div class="col-lg-5 ps-lg-5">
-          <h2 class="section-title mb-4">Skills & Tools</h2>
-          <p>I work across the full stack, comfortable moving between front-end interfaces and back-end systems, with a growing focus on systems-level programming.</p>
-
-          <ul class="list-unstyled custom-list my-4">
-            <li>HTML5, CSS3 & JavaScript</li>
-            <li>React & Node.js</li>
-            <li>Firebase, Git & Linux</li>
-            <li>Rust for systems programming</li>
-          </ul>
-          <p><a href="#projects" class="btn">See My Work</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Skills Section -->
-
-  <!-- Start Featured Projects -->
-  <div class="popular-product" id="projects">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-          <div class="product-item-sm d-flex">
-            <div class="thumbnail">
-              <img src="image/nexora-hub.png" alt="Nexora Technologies" class="img-fluid">
-            </div>
-            <div class="pt-3">
-              <h3>Nexora Technologies</h3>
-              <p>A freelance marketplace connecting businesses, developers, startups and cybersecurity experts.</p>
-              <p><a href="https://francis297-web.github.io/nexora/" target="_blank">View Project</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-          <div class="product-item-sm d-flex">
-            <div class="thumbnail">
-              <img src="image/Fratience.png" alt="Fratience Tech Solutions" class="img-fluid">
-            </div>
-            <div class="pt-3">
-              <h3>Fratience Tech Solutions</h3>
-              <p>A tech platform solving local, practical technology issues for businesses and individuals.</p>
-              <p><a href="https://project-3fsps-7jc9zubdm-fratience.vercel.app" target="_blank">View Project</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-          <div class="product-item-sm d-flex">
-            <div class="thumbnail">
-              <img src="image/Signix.webp" alt="Signix" class="img-fluid">
-            </div>
-            <div class="pt-3">
-              <h3>Signix</h3>
-              <p>A sign language web-school for the deaf — KSL dictionary, creator tools, and an AI tutor.</p>
-              <p><a href="https://signi-6s5o2gddf-fratience.vercel.app" target="_blank">View Project</a></p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- End Featured Projects -->
-
-  <!-- Start Testimonial Slider -->
-  <div class="testimonial-section" id="testimonials">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 mx-auto text-center">
-          <h2 class="section-title">What People Say</h2>
-        </div>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-12">
-          <div class="testimonial-slider-wrap text-center">
-
-            <div id="testimonial-nav">
-              <span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
-              <span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
-            </div>
-
-            <div class="testimonial-slider">
-
-              <div class="item">
-                <div class="row justify-content-center">
-                  <div class="col-lg-8 mx-auto">
-                    <div class="testimonial-block text-center">
-                      <blockquote class="mb-5">
-                        <p>&ldquo;Francis is an exceptional developer with great attention to detail. His work on our project was outstanding!&rdquo;</p>
-                      </blockquote>
-                      <div class="author-info">
-                        <div class="author-pic">
-                          <img src="image/John Doe.webp" alt="John Doe" class="img-fluid">
-                        </div>
-                        <h3 class="font-weight-bold">John Doe</h3>
-                        <span class="position d-block mb-3">CEO, Tech Startup</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- END item -->
-
-              <div class="item">
-                <div class="row justify-content-center">
-                  <div class="col-lg-8 mx-auto">
-                    <div class="testimonial-block text-center">
-                      <blockquote class="mb-5">
-                        <p>&ldquo;Collaborated with Francis on multiple projects. His technical expertise and problem-solving skills are unmatched.&rdquo;</p>
-                      </blockquote>
-                      <div class="author-info">
-                        <div class="author-pic">
-                          <img src="image/Jane Muthoni.webp" alt="Jane Muthoni" class="img-fluid">
-                        </div>
-                        <h3 class="font-weight-bold">Jane Muthoni</h3>
-                        <span class="position d-block mb-3">Product Manager</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- END item -->
-
-              <div class="item">
-                <div class="row justify-content-center">
-                  <div class="col-lg-8 mx-auto">
-                    <div class="testimonial-block text-center">
-                      <blockquote class="mb-5">
-                        <p>&ldquo;A true professional who delivers quality code and meets deadlines. Highly recommended for any web project.&rdquo;</p>
-                      </blockquote>
-                      <div class="author-info">
-                        <div class="author-pic">
-                          <img src="image/Alvin.png" alt="Alvin Kariuki" class="img-fluid">
-                        </div>
-                        <h3 class="font-weight-bold">Alvin Kariuki</h3>
-                        <span class="position d-block mb-3">CTO, Alvindo Innovation Labs</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- END item -->
-
-              <div class="item">
-                <div class="row justify-content-center">
-                  <div class="col-lg-8 mx-auto">
-                    <div class="testimonial-block text-center">
-                      <blockquote class="mb-5">
-                        <p>&ldquo;Collaborated with Francis on multiple projects. His technical expertise and problem-solving skills are unmatched.&rdquo;</p>
-                      </blockquote>
-                      <div class="author-info">
-                        <div class="author-pic">
-                          <img src="image/Patience.png" alt="Patience Wambui" class="img-fluid">
-                        </div>
-                        <h3 class="font-weight-bold">Patience Wambui</h3>
-                        <span class="position d-block mb-3">Founder & CEO, Signix</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- END item -->
-
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Testimonial Slider -->
-
-  <!-- Start Blog Section -->
-  <div class="blog-section" id="blog">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-6">
-          <h2 class="section-title">Latest Articles</h2>
-        </div>
-        <div class="col-md-6 text-start text-md-end">
-          <a href="#" class="more">View All Posts</a>
-        </div>
-      </div>
-
-      <div class="row">
-
-        <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-          <div class="post-entry">
-            <a href="#" class="post-thumbnail"><img src="image/post-1.jpg" alt="Building Scalable Web Applications" class="img-fluid"></a>
-            <div class="post-content-entry">
-              <h3><a href="#">Building Scalable Web Applications</a></h3>
-              <div class="meta">
-                <span>by <a href="#">Francis Mbugua</a></span> <span>on <a href="#">Jul 15, 2026</a></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-          <div class="post-entry">
-            <a href="#" class="post-thumbnail"><img src="image/post-2.jpg" alt="Cybersecurity Essentials for Developers" class="img-fluid"></a>
-            <div class="post-content-entry">
-              <h3><a href="#">Cybersecurity Essentials for Developers</a></h3>
-              <div class="meta">
-                <span>by <a href="#">Francis Mbugua</a></span> <span>on <a href="#">Jul 10, 2026</a></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-          <div class="post-entry">
-            <a href="#" class="post-thumbnail"><img src="image/post-3.jpg" alt="JavaScript Tips & Tricks" class="img-fluid"></a>
-            <div class="post-content-entry">
-              <h3><a href="#">JavaScript Tips & Tricks</a></h3>
-              <div class="meta">
-                <span>by <a href="#">Francis Mbugua</a></span> <span>on <a href="#">Jul 5, 2026</a></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- End Blog Section -->
-
-  <!-- Start Footer Section -->
-  <footer class="footer-section" id="contact">
-    <div class="container relative">
-
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="subscription-form">
-            <h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="" class="img-fluid"></span><span>Get In Touch</span></h3>
-
-            <form action="mailto:francischege381@gmail.com" method="post" enctype="text/plain" class="row g-3">
-              <div class="col-auto">
-                <input type="text" class="form-control" placeholder="Enter your name" required>
-              </div>
-              <div class="col-auto">
-                <input type="email" class="form-control" placeholder="Enter your email" required>
-              </div>
-              <div class="col-auto">
-                <button class="btn btn-primary" type="submit">
-                  <span class="fa fa-paper-plane"></span>
-                </button>
-              </div>
-            </form>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="row g-5 mb-5">
-        <div class="col-lg-4">
-          <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Francis<span>.</span></a></div>
-          <p class="mb-4">Full Stack Developer and founder of Nexora Technologies, based in Kenya. Available for freelance and full-time opportunities.</p>
-
-          <ul class="list-unstyled custom-social">
-            <li><a href="https://github.com/Francis297-web" target="_blank"><span class="fa fa-brands fa-github"></span></a></li>
-            <li><a href="https://www.instagram.com/just.call.mi.Cisco" target="_blank"><span class="fa fa-brands fa-instagram"></span></a></li>
-            <li><a href="https://www.facebook.com/FrakySpikes" target="_blank"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-            <li><a href="https://wa.me/254790357975" target="_blank"><span class="fa fa-brands fa-whatsapp"></span></a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-8">
-          <div class="row links-wrap">
-            <div class="col-6 col-sm-6 col-md-4">
-              <ul class="list-unstyled">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-
-            <div class="col-6 col-sm-6 col-md-4">
-              <ul class="list-unstyled">
-                <li><a href="mailto:francischege381@gmail.com">Email Me</a></li>
-                <li><a href="assets/Francis_Mbugua_CV.pdf" download>Download CV</a></li>
-                <li><a href="https://wa.me/254790357975" target="_blank">WhatsApp</a></li>
-              </ul>
-            </div>
-
-            <div class="col-6 col-sm-6 col-md-4">
-              <ul class="list-unstyled">
-                <li><a href="https://francis297-web.github.io/nexora/" target="_blank">Nexora Technologies</a></li>
-                <li><a href="https://project-3fsps-7jc9zubdm-fratience.vercel.app" target="_blank">Fratience Tech</a></li>
-                <li><a href="https://signi-6s5o2gddf-fratience.vercel.app" target="_blank">Signix</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="border-top copyright">
-        <div class="row pt-4">
-          <div class="col-lg-6">
-            <p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Francis Mbugua Chege. All Rights Reserved.
-            </p>
-          </div>
-
-          <div class="col-lg-6 text-center text-lg-end">
-            <ul class="list-unstyled d-inline-flex ms-auto">
-              <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
+    <div class="footer-bottom">© 2026 Francis Mbugua. All rights reserved.</div>
   </footer>
-  <!-- End Footer Section -->
 
-
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/tiny-slider.js"></script>
-  <script src="js/custom.js"></script>
 </body>
-
 </html>
-  
