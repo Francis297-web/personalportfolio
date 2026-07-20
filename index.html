@@ -1,209 +1,184 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Francis Mbugua — Portfolio</title>
-
-  <!-- Poppins font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Icons (optional) -->
-  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous" defer></script>
-  <script defer>
-    // Loader hide + year + simple nav toggle + reveal observer
-    window.addEventListener('load', () => {
-      const loader = document.getElementById('loader');
-      if (loader) loader.classList.add('loaded');
-      const y = document.getElementById('year');
-      if (y) y.textContent = new Date().getFullYear();
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      // Mobile nav toggle
-      const navToggle = document.createElement('button');
-      navToggle.className = 'nav-toggle';
-      navToggle.setAttribute('aria-label','Toggle navigation');
-      navToggle.innerHTML = '<span></span><span></span><span></span>';
-      document.querySelector('.navbar').appendChild(navToggle);
-      const navLinks = document.querySelector('.nav-links');
-      navToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
-
-      // IntersectionObserver for reveal
-      const reveals = document.querySelectorAll('.reveal');
-      if ('IntersectionObserver' in window) {
-        const obs = new IntersectionObserver((entries) => {
-          entries.forEach(e => {
-            if (e.isIntersecting) {
-              e.target.classList.add('visible');
-              obs.unobserve(e.target);
-            }
-          });
-        }, { threshold: 0.12 });
-        reveals.forEach(r => obs.observe(r));
-      } else {
-        reveals.forEach(r => r.classList.add('visible'));
-      }
-
-      // Back to top
-      const back = document.querySelector('.back-to-top');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) back.classList.add('show'); else back.classList.remove('show');
-      });
-      back.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-    });
-  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Francis Mbugua Chege | Full Stack Developer & Founder Nexora</title>
+  <meta name="description" content="Francis Mbugua Chege - Full Stack Developer, Founder of Nexora Technologies, Kenya. Building web, mobile, and cybersecurity solutions.">
+  <meta property="og:title" content="Francis Mbugua Chege | Full Stack Developer">
+  <meta property="og:description" content="Founder of Nexora Technologies. Building scalable products.">
+  <meta property="og:image" content="image/profile.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Loader -->
-  <div id="loader" aria-hidden="true">
-    <div class="loader-content">
-      <div class="loader-logo">
-        <img src="image/logo.png" alt="Logo">
-      </div>
-      <div class="loading-bar"><span></span></div>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo"><span class="logo-mark">F</span> Francis<span style="color:#7c3aed">.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div style="display:flex;gap:8px">
+      <a href="assets/Francis_Mbugua_CV.pdf" download class="btn btn-ghost" style="height:36px;padding:0 14px"><i class="fas fa-download"></i> CV</a>
+      <a href="https://wa.me/254790357975" target="_blank" class="btn btn-primary" style="height:36px;padding:0 16px"><i class="fab fa-whatsapp"></i> Hire Me</a>
     </div>
   </div>
+</nav>
 
-  <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="image/logo.png" alt="Logo">
+<section class="hero" id="home">
+  <div class="grid-pattern"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="badge"><span class="badge-dot"></span> AVAILABLE FOR FREELANCE • NAIROBI, EAT</div>
+      <h1 class="h1">Full Stack Developer <span>building products that scale.</span></h1>
+      <p class="lead">I'm Francis Mbugua Chege, founder of Nexora Technologies. I build modern websites, Android apps, cybersecurity solutions, and software that solves real-world problems in Kenya and beyond.</p>
+      <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap">
+        <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-up-right-from-square" style="font-size:12px"></i></a>
+        <a href="#contact" class="btn btn-ghost">Contact Me</a>
       </div>
-
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <a class="resume-btn" href="resume.pdf" download>Download Resume</a>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Hello, I'm <span>Francis Mbugua</span></h1>
-        <p class="hero-description">I build responsive, accessible, and animated web experiences.</p>
-
-        <div class="hero-buttons">
-          <a class="btn-primary" href="#projects">View Projects</a>
-          <a class="btn-secondary" href="#contact">Get in Touch</a>
-        </div>
-
-        <div class="social-icons" aria-label="social links">
-          <a href="https://github.com/Francis297-web" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.93 3.19 9.11 7.61 10.59.56.1.77-.24.77-.54 0-.27-.01-1-.02-1.96-3.09.67-3.74-1.49-3.74-1.49-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 .17 1.57-.75 1.57-.75.99-1.7 2.6-1.21 3.24-.93.1-.73.39-1.21.71-1.49-2.47-.28-5.07-1.24-5.07-5.52 0-1.22.44-2.22 1.16-3-.12-.28-.5-1.4.11-2.92 0 0 .95-.3 3.12 1.15a10.8 10.8 0 0 1 2.84-.38c.96.01 1.93.13 2.84.38 2.17-1.45 3.12-1.15 3.12-1.15.61 1.52.23 2.64.11 2.92.72.78 1.16 1.78 1.16 3 0 4.29-2.61 5.24-5.09 5.52.4.35.76 1.04.76 2.1 0 1.52-.01 2.75-.01 3.12 0 .3.2.65.78.54C19.06 20.86 22.25 16.68 22.25 11.75 22.25 5.48 17.27.5 12 .5z"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4v14h-4V8zM8.5 8h3.8v1.9h.1c.5-.9 1.7-1.9 3.5-1.9 3.7 0 4.4 2.4 4.4 5.5V22h-4v-6.2c0-1.5 0-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V22h-4V8z"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-image">
-        <div class="image-container">
-          <img src="image/profile.png" alt="Profile picture">
-        </div>
+      <div class="stats">
+        <div><div class="stat-val">3+ yrs</div><div class="stat-label">Experience</div></div>
+        <div><div class="stat-val">15+</div><div class="stat-label">Projects Shipped</div></div>
+        <div><div class="stat-val">100%</div><div class="stat-label">On Time</div></div>
       </div>
     </div>
-  </section>
 
-  <!-- About -->
-  <section id="about">
-    <div class="about-card reveal">
-      <h2>About Me</h2>
-      <p>I design and build modern web applications with a focus on performance, accessibility, and delightful interactions.</p>
+    <div class="hero-card reveal">
+      <img class="hero-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop" alt="Francis">
+      <div class="float-badge" style="top:28px;right:28px"><i class="fab fa-react"></i> React</div>
+      <div class="float-badge" style="bottom:90px;left:-10px"><i class="fab fa-node-js"></i> Node.js</div>
+      <div class="float-badge" style="bottom:28px;right:28px;background:#fff;color:#000">Rust • Systems</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">About & Featured Work</div>
+        <h2 class="h2">Building software that solves<br>real problems, not just demos.</h2>
+      </div>
+      <p class="lead" style="max-width:380px;font-size:14px">Kenyan developer, founder, full-stack generalist. I work interface to infrastructure, with security baked in from day one.</p>
+    </div>
+
+    <div class="cards">
+      <a href="https://francis297-web.github.io/nexora/" target="_blank" class="card reveal">
+        <img class="card-img" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop" alt="Nexora">
+        <div class="card-body">
+          <div class="card-tag">Live • Marketplace</div>
+          <div class="card-title">Nexora Technologies</div>
+          <div class="card-desc">Freelance marketplace connecting businesses, developers, startups and cybersecurity experts.</div>
+          <div class="tech"><span>React</span><span>Firebase</span><span>Tailwind</span></div>
+        </div>
+      </a>
+
+      <a href="https://project-3fsps-7jc9zubdm-fratience.vercel.app" target="_blank" class="card reveal">
+        <img class="card-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Fratience">
+        <div class="card-body">
+          <div class="card-tag">Live • Platform</div>
+          <div class="card-title">Fratience Tech Solutions</div>
+          <div class="card-desc">Practical tech platform solving local business issues, M-Pesa integrated and offline-first.</div>
+          <div class="tech"><span>Next.js</span><span>MongoDB</span><span>Vercel</span></div>
+        </div>
+      </a>
+
+      <a href="https://signi-6s5o2gddf-fratience.vercel.app" target="_blank" class="card reveal">
+        <img class="card-img" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop" alt="Signix">
+        <div class="card-body">
+          <div class="card-tag">Live • EdTech + AI</div>
+          <div class="card-title">Signix — KSL Web School</div>
+          <div class="card-desc">Sign language school for the deaf — KSL dictionary, creator tools, AI tutor.</div>
+          <div class="tech"><span>React</span><span>AI</span><span>PWA</span></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="features">
+      <div class="feat reveal"><div class="feat-icon"><i class="fas fa-code"></i></div><h4>Clean Code</h4><p>Readable, maintainable, documented. Easy for any team to extend.</p></div>
+      <div class="feat reveal"><div class="feat-icon"><i class="fas fa-bolt"></i></div><h4>Fast Delivery</h4><p>Clear milestones, weekly demos, no last-minute surprises.</p></div>
+      <div class="feat reveal"><div class="feat-icon"><i class="fas fa-headset"></i></div><h4>Responsive Support</h4><p>Reachable on WhatsApp & email during and after launch.</p></div>
+      <div class="feat reveal"><div class="feat-icon"><i class="fas fa-shield-halved"></i></div><h4>Security-Minded</h4><p>Auth, data protection, and secure coding from day one.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="section-inner">
+    <div class="section-head"><div><div class="eyebrow">Stack</div><h2 class="h2">Skills & Tools</h2></div></div>
     <div class="skills-grid">
-      <div class="skill-card reveal"><i class="fab fa-html5" aria-hidden="true"></i><h3>HTML</h3></div>
-      <div class="skill-card reveal"><i class="fab fa-css3-alt" aria-hidden="true"></i><h3>CSS</h3></div>
-      <div class="skill-card reveal"><i class="fab fa-js" aria-hidden="true"></i><h3>JavaScript</h3></div>
-      <div class="skill-card reveal"><i class="fab fa-react" aria-hidden="true"></i><h3>React</h3></div>
+      <div class="card" style="padding:20px"><div class="card-tag">Frontend</div><div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px"><span class="pill">HTML5</span><span class="pill">CSS3</span><span class="pill">JavaScript</span><span class="pill">React</span><span class="pill">Tailwind</span></div></div>
+      <div class="card" style="padding:20px"><div class="card-tag">Backend & Tools</div><div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px"><span class="pill">Node.js</span><span class="pill">Firebase</span><span class="pill">Git</span><span class="pill">Linux</span><span class="pill">Vercel</span><span class="pill">Rust</span></div></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <article class="project-card reveal">
-        <img src="image/nexora.webp" alt="Nexora">
-        <h3>Nexora Technologies</h3>
-        <p>Responsive tech website for Nexora.</p>
-        <div class="project-buttons">
-          <a class="btn-primary" href="https://your-nexora-live-demo.example" target="_blank" rel="noopener noreferrer">Live Demo</a>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <img src="image/signix.webp" alt="Signix">
-        <h3>Signix</h3>
-        <p>Sign language web application demo.</p>
-        <div class="project-buttons">
-          <a class="btn-primary" href="https://your-signix-live-demo.example" target="_blank" rel="noopener noreferrer">Live Demo</a>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <img src="image/Fratience.png" alt="Fratience">
-        <h3>Fratience</h3>
-        <p>Another tech web project showcasing innovation.</p>
-        <div class="project-buttons">
-          <a class="btn-primary" href="https://your-fratience-live-demo.example" target="_blank" rel="noopener noreferrer">Live Demo</a>
-        </div>
-      </article>
+<section class="section" id="projects">
+  <div class="section-inner">
+    <div class="section-head"><div><div class="eyebrow">Selected Work</div><h2 class="h2">Featured Projects</h2></div><a href="#contact" class="btn btn-ghost">Start a project</a></div>
+    <div class="cards">
+      <div class="card reveal" style="grid-column:span 1"><div class="card-body"><h3 style="font-size:18px">Nexora Technologies</h3><p class="card-desc" style="margin-top:8px">Marketplace for hiring vetted developers and security experts in Kenya.</p><div style="margin-top:16px"><a href="https://francis297-web.github.io/nexora/" target="_blank" class="btn btn-primary" style="height:36px">Live Demo</a></div></div></div>
+      <div class="card reveal" style="grid-column:span 1"><div class="card-body"><h3 style="font-size:18px">Fratience Tech</h3><p class="card-desc" style="margin-top:8px">Local-first platform for small businesses.</p><div style="margin-top:16px"><a href="https://project-3fsps-7jc9zubdm-fratience.vercel.app" target="_blank" class="btn btn-primary" style="height:36px">Live Demo</a></div></div></div>
+      <div class="card reveal" style="grid-column:span 1"><div class="card-body"><h3 style="font-size:18px">Signix</h3><p class="card-desc" style="margin-top:8px">KSL dictionary + AI tutor for deaf learners.</p><div style="margin-top:16px"><a href="https://signi-6s5o2gddf-fratience.vercel.app" target="_blank" class="btn btn-primary" style="height:36px">Live Demo</a></div></div></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
-      <textarea name="message" placeholder="Your message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
       <div>
-        <h3>Francis Mbugua</h3>
-        <p>Building modern, responsive web experiences.</p>
+        <div class="eyebrow">Contact</div>
+        <h2 class="h2">Let's build something<br>that ships.</h2>
+        <p class="lead" style="margin-top:12px;font-size:14px">Freelance or full-time, remote or Nairobi. Fast reply within 2 hours EAT.</p>
+        <div style="margin-top:20px;display:grid;gap:10px">
+          <a href="mailto:francischege381@gmail.com" style="display:flex;gap:12px;align-items:center;padding:14px;border:1px solid var(--border);border-radius:12px;background:var(--card)"><div class="feat-icon" style="margin:0"><i class="fas fa-envelope"></i></div><div><div class="mono" style="font-size:11px;color:var(--muted2)">Email</div><div style="font-size:13px">francischege381@gmail.com</div></div></a>
+          <a href="https://wa.me/254790357975" target="_blank" style="display:flex;gap:12px;align-items:center;padding:14px;border:1px solid var(--border);border-radius:12px;background:var(--card)"><div class="feat-icon" style="margin:0;background:#06ffa5;color:#000"><i class="fab fa-whatsapp"></i></div><div><div class="mono" style="font-size:11px;color:var(--muted2)">WhatsApp</div><div style="font-size:13px">+254 790 357 975</div></div></a>
+        </div>
       </div>
-      <div>
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div class="card" style="padding:22px">
+        <div style="display:flex;justify-content:space-between"><div style="font-weight:600;font-size:14px">Send a message</div><div class="mono" style="font-size:11px;color:var(--muted2)">No backend • stays local</div></div>
+        <form style="display:grid;gap:14px;margin-top:18px" onsubmit="event.preventDefault(); window.location.href='mailto:francischege381@gmail.com?subject=Project inquiry&body='+encodeURIComponent(document.getElementById('msg').value)">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div><div class="mono" style="font-size:11px;color:var(--muted2);text-transform:uppercase">Name</div><input class="input" style="margin-top:6px" placeholder="Your name" required></div>
+            <div><div class="mono" style="font-size:11px;color:var(--muted2);text-transform:uppercase">Email</div><input class="input" style="margin-top:6px" type="email" placeholder="you@company.com" required></div>
+          </div>
+          <div><div class="mono" style="font-size:11px;color:var(--muted2);text-transform:uppercase">Message</div><textarea id="msg" class="textarea" style="margin-top:6px" rows="5" placeholder="Tell me about your project, timeline, budget..."></textarea></div>
+          <button class="btn btn-primary" type="submit" style="width:fit-content">Send via Email <i class="fas fa-paper-plane"></i></button>
+        </form>
       </div>
     </div>
-    <div class="footer-bottom">© <span id="year"></span> Francis Mbugua. All rights reserved.</div>
-  </footer>
+  </div>
+</section>
 
-  <!-- Floating / utility buttons -->
-  <button class="theme-toggle" aria-label="Toggle theme">🌓</button>
-  <a class="whatsapp-btn" href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a>
-  <button class="back-to-top" aria-label="Back to top">↑</button>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="logo"><span class="logo-mark">F</span> Francis<span style="color:#7c3aed">.</span></div>
+      <p style="color:var(--muted);font-size:13px;max-width:360px;margin-top:8px">Full Stack Developer and founder of Nexora Technologies, based in Kenya. Building products that scale.</p>
+      <div style="display:flex;gap:10px;margin-top:14px">
+        <a href="https://github.com/Francis297-web" target="_blank" style="width:36px;height:36px;border-radius:10px;border:1px solid var(--border);display:grid;place-items:center"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/just.call.mi.Cisco" target="_blank" style="width:36px;height:36px;border-radius:10px;border:1px solid var(--border);display:grid;place-items:center"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/FrakySpikes" target="_blank" style="width:36px;height:36px;border-radius:10px;border:1px solid var(--border);display:grid;place-items:center"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+    <div style="display:flex;gap:40px">
+      <div><div class="mono" style="font-size:11px;color:var(--muted2);text-transform:uppercase;letter-spacing:.1em">Navigation</div><div style="display:grid;gap:8px;margin-top:10px;font-size:13px"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></div>
+      <div><div class="mono" style="font-size:11px;color:var(--muted2);text-transform:uppercase;letter-spacing:.1em">Live Projects</div><div style="display:grid;gap:8px;margin-top:10px;font-size:13px"><a href="https://francis297-web.github.io/nexora/" target="_blank">Nexora</a><a href="https://project-3fsps-7jc9zubdm-fratience.vercel.app" target="_blank">Fratience</a><a href="https://signi-6s5o2gddf-fratience.vercel.app" target="_blank">Signix</a></div></div>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:16px 20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:var(--muted2)" class="mono">
+    <div>© <span id="year"></span> Francis Mbugua Chege. All rights reserved.</div>
+    <div>Built in Nairobi, Kenya</div>
+  </div>
+</footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
